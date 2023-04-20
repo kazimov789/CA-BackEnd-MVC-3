@@ -1,2 +1,13 @@
-﻿
+﻿@model FeatureForService
 
+<section id="services" class="services">
+    <div class="container">
+        <div class="col-lg-12 col-md-12 d-flex align-items-stretch">
+            <div class="icon-box">
+                <div class="icon"><i class="@Model.Icon"></i></div>
+                <h4><a href="/service/detail/@Model.Id">@Model.Title</a></h4>
+                <p>@Model.Desc</p>
+            </div>
+        </div>
+    </div>
+</section>

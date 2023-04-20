@@ -15,7 +15,7 @@ namespace ThirdTask_For_BackEnd___20._04._2023
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews(); 
+            services.AddControllersWithViews();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -30,18 +30,24 @@ namespace ThirdTask_For_BackEnd___20._04._2023
 
             app.UseEndpoints(endpoints =>
             {
-                
+
                 endpoints.MapControllerRoute
                 (
                     "default",
                     "{controller=home}/{action=index}/{id?}"
                 );
-                //endpoints.MapAreaControllerRoute
-                //(
-                //    "about",
-                //    "about-us",
-                //    defaults: new {controller="home",action= "index" }
-                //);
+                endpoints.MapControllerRoute
+                (
+                    "about",
+                    "about-us",
+                    defaults: new { controller = "home", action = "about" }
+                );
+                endpoints.MapControllerRoute
+                (
+                    "contact",
+                    "contact-us",
+                    defaults: new { controller = "home", action = "contact" }
+                );
             });
         }
     }

@@ -19,8 +19,15 @@ using ThirdTask_For_BackEnd___20._04._2023.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\99470\Desktop\Code\BackEnd\ThirdTask For BackEnd - 20.04.2023\ThirdTask For BackEnd - 20.04.2023\Views\_ViewImports.cshtml"
+using ThirdTask_For_BackEnd___20._04._2023.ModelView;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0d5f86dd54370c62252cbee799f1173e04e01014", @"/Views/Service/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"23e6c897dbc749936e1d3838ffc14d1fc6ebe6af", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2b0fa966af3a144b27d11425051e20423854ddd7", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Service_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<FeatureForService>>
     #nullable disable

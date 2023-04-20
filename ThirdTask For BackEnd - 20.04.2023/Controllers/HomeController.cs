@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ThirdTask_For_BackEnd___20._04._2023.DataAccess;
+using ThirdTask_For_BackEnd___20._04._2023.ModelView;
 
 namespace ThirdTask_For_BackEnd___20._04._2023.Controllers
 {
@@ -6,7 +8,10 @@ namespace ThirdTask_For_BackEnd___20._04._2023.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+           HomeModelView homeModelView = new HomeModelView();
+            homeModelView.ServiceFeature = Data.FeatureService;
+            homeModelView.HomeFeature = Data.FeatureHome;
+            return View(homeModelView);
         }
         public IActionResult About()
         {
