@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\ThirdTask For BackEnd - 20.04.2023.props" />
+</Project>
