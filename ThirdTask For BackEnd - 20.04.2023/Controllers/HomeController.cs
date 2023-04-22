@@ -6,12 +6,18 @@ namespace ThirdTask_For_BackEnd___20._04._2023.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly DataContext _context;
+        public HomeController(DataContext context)
+        {
+            _context = context;
+        }
         public IActionResult Index()
         {
-           HomeModelView homeModelView = new HomeModelView();
-            homeModelView.ServiceFeature = Data.FeatureService;
-            homeModelView.HomeFeature = Data.FeatureHome;
-            return View(homeModelView);
+           //HomeModelView homeModelView = new HomeModelView();
+           // homeModelView.ServiceFeature = _context.FeatureForService;
+           // homeModelView.HomeFeature = _context.FeatureForHome;
+           // homeModelView.Slider = _context.Slider;
+            return View(_context);
         }
         public IActionResult About()
         {

@@ -26,8 +26,15 @@ using ThirdTask_For_BackEnd___20._04._2023.ModelView;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\99470\Desktop\Code\BackEnd\ThirdTask For BackEnd - 20.04.2023\ThirdTask For BackEnd - 20.04.2023\Views\_ViewImports.cshtml"
+using ThirdTask_For_BackEnd___20._04._2023.DataAccess;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"995d0c46f96a3386b9e35801b6c3c2643e581f66", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2b0fa966af3a144b27d11425051e20423854ddd7", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"10bc0ce00c57974d6c8626a4cdaa253544ae1025", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable

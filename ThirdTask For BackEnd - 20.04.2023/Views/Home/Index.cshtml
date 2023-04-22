@@ -1,4 +1,5 @@
-﻿@model HomeModelView;
+﻿@*@model HomeModelView;*@
+@model DataContext
 <!-- ======= Hero Section ======= -->
 <section id="hero">
     <div class="hero-container">
@@ -7,40 +8,18 @@
             <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
             <div class="carousel-inner" role="listbox">
-
-                <!-- Slide 1 -->
-                <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg)">
-                    <div class="carousel-container">
-                        <div class="carousel-content">
-                            <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Eterna</span></h2>
-                            <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                            <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+                @foreach (var item in Model.Slider)
+                {
+                    <div class="carousel-item @(item.Id==1?"active":"")" style="background-image: url(assets/img/slide/slide-@(item.Id).jpg)">
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <h2 class="animate__animated animate__fadeInDown"><span>@item.Title</span></h2>
+                                <p class="animate__animated animate__fadeInUp">@item.Desc</p>
+                                <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg)">
-                    <div class="carousel-container">
-                        <div class="carousel-content">
-                            <h2 class="animate__animated fanimate__adeInDown">Lorem <span>Ipsum Dolor</span></h2>
-                            <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                            <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg)">
-                    <div class="carousel-container">
-                        <div class="carousel-content">
-                            <h2 class="animate__animated animate__fadeInDown">Sequi ea <span>Dime Lara</span></h2>
-                            <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                            <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
+                }
             </div>
 
             <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
@@ -62,7 +41,7 @@
         <div class="container">
 
             <div class="row">
-                @foreach (var item in Model.HomeFeature)
+                @foreach (var item in Model.FeatureForHome)
                 {
                     <div class="col-lg-4 mt-4 mt-lg-0">
                         <div class="icon-box">
@@ -110,12 +89,12 @@
         <div class="container">
 
             <div class="row">
-                @foreach (var item in Model.ServiceFeature)
+                @foreach (var item in Model.FeatureForService)
                 {
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                         <div class="icon-box">
                             <div class="icon"><i class="@item.Icon"></i></div>
-                            <h4><a href="/service/detail/@item.Id">@item.Title</a></h4>
+                            <h4><a asp-controller="service" asp-action="detail" asp-route-id="@item.Id">@item.Title</a></h4>
                             <p>@item.Desc</p>
                         </div>
                     </div>

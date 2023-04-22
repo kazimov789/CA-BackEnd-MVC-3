@@ -26,8 +26,15 @@ using ThirdTask_For_BackEnd___20._04._2023.ModelView;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\99470\Desktop\Code\BackEnd\ThirdTask For BackEnd - 20.04.2023\ThirdTask For BackEnd - 20.04.2023\Views\_ViewImports.cshtml"
+using ThirdTask_For_BackEnd___20._04._2023.DataAccess;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"97260bddfab4fd7aa3c53180edf20da0233a67da", @"/Views/Home/Contact.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2b0fa966af3a144b27d11425051e20423854ddd7", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"10bc0ce00c57974d6c8626a4cdaa253544ae1025", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Home_Contact : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable
@@ -115,7 +122,7 @@ using ThirdTask_For_BackEnd___20._04._2023.ModelView;
 
                 <div class=""col-lg-6"">
                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "97260bddfab4fd7aa3c53180edf20da0233a67da6897", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "97260bddfab4fd7aa3c53180edf20da0233a67da7165", async() => {
                 WriteLiteral(@"
                         <div class=""row"">
                             <div class=""col-md-6 form-group"">
